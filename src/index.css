@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#song-list-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+#song-card {
+    scroll-snap-align: start;
+}
