@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import SongList from "./SongList";
 
-export default function Left() {
+export default function Left({ songs, playSong, currentSong }) {
   return (
     <div className="flex w-2/5 flex-col justify-between md:w-2/5">
       <div>
@@ -47,7 +47,7 @@ export default function Left() {
             </div>
           </div>
         </div>
-        <SongList />
+        <SongList songs={songs} playSong={playSong} currentSong={currentSong} />
       </div>
       <Footer />
     </div>

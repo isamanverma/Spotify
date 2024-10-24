@@ -2,7 +2,7 @@ import React from "react";
 import Playlists from "./Playlists";
 import Playbar from "./Playbar";
 
-export default function Right() {
+export default function Right({ playSong, pauseSong, nextSong, previousSong, isPlaying, currentSong, audioRef }) {
   return (
     <div className="flex w-full flex-col justify-between pt-1">
       <div>
@@ -29,7 +29,15 @@ export default function Right() {
         </div>
         <Playlists />
       </div>
-      <Playbar />
+      <Playbar
+        playSong={playSong}
+        pauseSong={pauseSong}
+        nextSong={nextSong}
+        previousSong={previousSong}
+        isPlaying={isPlaying}
+        currentSong={currentSong}
+        audioRef={audioRef}
+      />
     </div>
   );
 }
